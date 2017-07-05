@@ -1,0 +1,34 @@
+{
+  "name": "changelogit",
+  "version": "1.0.0",
+  "description": "A JavaScript-Library version of [git-extras/git-changelog](https://github.com/tj/git-extras/blob/master/bin/git-changelog)",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint src",
+    "build": "babel src --out-dir lib",
+    "clean": "rimraf lib coverage .nyc_output",
+    "flow": "flow"
+  },
+  "keywords": [
+    "changelog",
+    "git",
+    "history"
+  ],
+  "author": "Bin Hou <houbin217jz@gmail.com> (https://twitter.com/houbin217jz)",
+  "license": "MIT",
+  "dependencies": {
+    "github": "^9.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.1.1",
+    "eslint-config-airbnb-deps": "^15.0.1",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-flowtype-errors": "^3.3.1",
+    "flow-bin": "^0.49.1",
+    "rimraf": "^2.6.1"
+  }
+}
