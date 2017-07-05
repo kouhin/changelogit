@@ -185,23 +185,23 @@ function getTagList(): Promise<Array<TagObject>> {
 }
 
 export type Options = {
-  titleTag: ?string, /* Tag label to use for most-recent (untagged) commits */
-  listAll: ?boolean, /* Retrieve all commits (ignores --start-tag, --final-tag) */
-  noMerges: ?boolean, /* Suppress commits from merged branches */
-  mergesOnly: ?boolean, /* Only uses merge commits (uses both subject and body of commit) */
+  titleTag?: string, /* Tag label to use for most-recent (untagged) commits */
+  listAll?: boolean, /* Retrieve all commits (ignores --start-tag, --final-tag) */
+  noMerges?: boolean, /* Suppress commits from merged branches */
+  mergesOnly?: boolean, /* Only uses merge commits (uses both subject and body of commit) */
 };
 
 export default function changelogit(
   startTag: ?string,
   finalTag: ?string,
-  options: Options,
+  options: Options = {},
 ): Promise<ChangeLogObject> {
   const opts: Options = Object.assign({}, ({
     titleTag: 'n.n.n',
     listAll: false,
     noMerges: false,
     mergesOnly: false,
-  }: Options), (options || {}));
+  }: Options), options);
 
   let startTagFound = false;
   let finalTagFound = false;
