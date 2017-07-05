@@ -1,5 +1,7 @@
 # Changelogit (Changelog for Git/Github)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kouhin/changelogit.svg?token=a5c3e74fcbe3aa1dd65f8ce5cbc0f266f384c681b96f0a574f5dd3150670054d&ts=1499286417290)](https://greenkeeper.io/)
+
 A JavaScript-Library version of [git-extras/git-changelog](https://github.com/tj/git-extras/blob/master/bin/git-changelog)
 
 [![npm](https://img.shields.io/npm/v/changelogit.svg)](https://www.npmjs.com/package/changelogit)
