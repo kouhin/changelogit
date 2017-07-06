@@ -1,6 +1,6 @@
 {
   "name": "changelogit",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A JavaScript-Library version of [git-extras/git-changelog](https://github.com/tj/git-extras/blob/master/bin/git-changelog)",
   "main": "lib/index.js",
   "scripts": {
@@ -8,6 +8,10 @@
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib coverage .nyc_output",
     "flow": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kouhin/changelogit.git"
   },
   "keywords": [
     "changelog",
