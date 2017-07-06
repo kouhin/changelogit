@@ -1,6 +1,6 @@
 {
   "name": "changelogit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A JavaScript-Library version of [git-extras/git-changelog](https://github.com/tj/git-extras/blob/master/bin/git-changelog)",
   "main": "lib/index.js",
   "scripts": {
