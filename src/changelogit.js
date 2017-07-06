@@ -23,27 +23,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import { exec } from 'child_process';
+import { exec as origExec } from 'child_process';
+import promisify from 'util.promisify';
+
 import type { CommitObject, TagObject, ChangeLogObject } from './types';
+
+const exec = promisify(origExec);
 
 const GIT_FORMAT_TAB = '%x09';
 const GIT_LOG_FORMAT_TAG = '%H %d %an %ae %aI %s'.split(' ').join(GIT_FORMAT_TAB);
 const GIT_LOG_FORMAT_COMMIT = '%H %T %an %ae %aI %cn %ce %cI %s %b %P'.split(' ').join(GIT_FORMAT_TAB);
 
 function execCmd(cmd: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    exec(cmd, (err, stdout, stderr) => {
-      if (err) {
-        reject(err);
-        return;
-      }
+  return exec(cmd)
+    .then(({ stdout, stderr }) => {
       if (stderr) {
-        reject(stderr);
-        return;
+        throw new Error(stderr);
       }
-      resolve(stdout);
+      return stdout;
     });
-  });
 }
 
 function fetchCommitRange(
