@@ -1,9 +1,10 @@
 {
   "name": "changelogit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A JavaScript-Library version of [git-extras/git-changelog](https://github.com/tj/git-extras/blob/master/bin/git-changelog)",
   "main": "lib/index.js",
   "scripts": {
+    "prepublish": "npm run clean && npm run test && npm run build",
     "test": "eslint src",
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib coverage .nyc_output",
