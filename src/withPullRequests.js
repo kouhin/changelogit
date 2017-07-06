@@ -41,7 +41,6 @@ class PullRequestSeeker {
       repo: this.repo,
       state: 'closed',
       page,
-      per_page: 100,
     }).then(({ data }) => {
       if (data) {
         data.forEach((d) => {
