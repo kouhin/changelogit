@@ -30,10 +30,6 @@ changelogit('v1.0.0', 'v2.0.0', {
 });
 ```
 
-## TODO
-
-- Changelogithub for Github API
-
 ## License
 
 MIT
