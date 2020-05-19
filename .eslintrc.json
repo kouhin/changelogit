@@ -1,18 +1,9 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "airbnb-base",
-    "plugin:flowtype/recommended"
-  ],
+    "airbnb-base"
+   ],
   "env": {
     "mocha": true
-  },
-  "plugins": [
-    "import",
-    "flowtype",
-    "flowtype-errors"
-  ],
-  "rules": {
-    "flowtype-errors/show-errors": 2
   }
 }

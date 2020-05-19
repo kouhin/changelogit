@@ -26,19 +26,13 @@
   "author": "Bin Hou <houbin217jz@gmail.com> (https://twitter.com/houbin217jz)",
   "license": "MIT",
   "dependencies": {
-    "github": "^9.2.0",
+    "@types/github": "^7.1.0",
+    "github": "^14.0.0",
     "util.promisify": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-flow": "^6.23.0",
-    "eslint": "^4.1.1",
-    "eslint-config-airbnb-deps": "^15.0.1",
-    "eslint-plugin-flowtype": "^2.34.1",
-    "eslint-plugin-flowtype-errors": "^3.3.1",
-    "flow-bin": "^0.49.1",
-    "rimraf": "^2.6.1"
+    "eslint": "^7.0.0",
+    "microbundle": "^0.12.0",
+    "rimraf": "^3.0.2"
   }
 }
